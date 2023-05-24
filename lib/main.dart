@@ -1,5 +1,7 @@
+import 'package:first/widgets/home_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 void main() {
   // showLayoutGuidelines();
@@ -59,69 +61,13 @@ class HomePage extends StatelessWidget {
               child: Row(
                 children: [
                   Expanded(
-                    child: Card(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          Column(
-                            children: [
-                              Icon(
-                                Icons.newspaper,
-                                size: 28,
-                              ),
-                              SizedBox(
-                                height: 15,
-                              ),
-                              Text(
-                                'Newsletter',
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w500, fontSize: 20),
-                              ),
-                            ],
-                          ),
-                          Text(
-                            'Last Update on\n15 May, 2023',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              fontWeight: FontWeight.w300,
-                            ),
-                          ),
-                          Icon(Icons.arrow_circle_right_outlined, size: 28),
-                        ],
-                      ),
+                    child: HomeCard(
+                      icon: MdiIcons.newspaperVariantMultipleOutline,
                     ),
                   ),
                   Expanded(
-                    child: Card(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          Column(
-                            children: [
-                              Icon(
-                                Icons.newspaper,
-                                size: 28,
-                              ),
-                              SizedBox(
-                                height: 15,
-                              ),
-                              Text(
-                                'Newsletter',
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w500, fontSize: 20),
-                              ),
-                            ],
-                          ),
-                          Text(
-                            'Last Update on\n15 May, 2023',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              fontWeight: FontWeight.w300,
-                            ),
-                          ),
-                          Icon(Icons.arrow_circle_right_outlined, size: 28),
-                        ],
-                      ),
+                    child: HomeCard(
+                      icon: MdiIcons.newspaperVariantMultipleOutline,
                     ),
                   ),
                 ],
@@ -132,69 +78,13 @@ class HomePage extends StatelessWidget {
               child: Row(
                 children: [
                   Expanded(
-                    child: Card(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          Column(
-                            children: [
-                              Icon(
-                                Icons.newspaper,
-                                size: 28,
-                              ),
-                              SizedBox(
-                                height: 15,
-                              ),
-                              Text(
-                                'Newsletter',
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w500, fontSize: 20),
-                              ),
-                            ],
-                          ),
-                          Text(
-                            'Last Update on\n15 May, 2023',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              fontWeight: FontWeight.w300,
-                            ),
-                          ),
-                          Icon(Icons.arrow_circle_right_outlined, size: 28),
-                        ],
-                      ),
+                    child: HomeCard(
+                      icon: MdiIcons.newspaperVariantMultipleOutline,
                     ),
                   ),
                   Expanded(
-                    child: Card(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          Column(
-                            children: [
-                              Icon(
-                                Icons.newspaper,
-                                size: 28,
-                              ),
-                              SizedBox(
-                                height: 15,
-                              ),
-                              Text(
-                                'Newsletter',
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w500, fontSize: 20),
-                              ),
-                            ],
-                          ),
-                          Text(
-                            'Last Update on\n15 May, 2023',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              fontWeight: FontWeight.w300,
-                            ),
-                          ),
-                          Icon(Icons.arrow_circle_right_outlined, size: 28),
-                        ],
-                      ),
+                    child: HomeCard(
+                      icon: MdiIcons.newspaperVariantMultipleOutline,
                     ),
                   ),
                 ],
@@ -205,69 +95,13 @@ class HomePage extends StatelessWidget {
               child: Row(
                 children: [
                   Expanded(
-                    child: Card(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          Column(
-                            children: [
-                              Icon(
-                                Icons.newspaper,
-                                size: 28,
-                              ),
-                              SizedBox(
-                                height: 15,
-                              ),
-                              Text(
-                                'Newsletter',
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w500, fontSize: 20),
-                              ),
-                            ],
-                          ),
-                          Text(
-                            'Last Update on\n15 May, 2023',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              fontWeight: FontWeight.w300,
-                            ),
-                          ),
-                          Icon(Icons.arrow_circle_right_outlined, size: 28),
-                        ],
-                      ),
+                    child: HomeCard(
+                      icon: MdiIcons.newspaperVariantMultipleOutline,
                     ),
                   ),
                   Expanded(
-                    child: Card(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          Column(
-                            children: [
-                              Icon(
-                                Icons.newspaper,
-                                size: 28,
-                              ),
-                              SizedBox(
-                                height: 15,
-                              ),
-                              Text(
-                                'Newsletter',
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w500, fontSize: 20),
-                              ),
-                            ],
-                          ),
-                          Text(
-                            'Last Update on\n15 May, 2023',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              fontWeight: FontWeight.w300,
-                            ),
-                          ),
-                          Icon(Icons.arrow_circle_right_outlined, size: 28),
-                        ],
-                      ),
+                    child: HomeCard(
+                      icon: MdiIcons.newspaperVariantMultipleOutline,
                     ),
                   ),
                 ],
