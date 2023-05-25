@@ -20,6 +20,9 @@ class Hello extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primaryColor: const Color.fromRGBO(84, 111, 138, 1),
+        colorScheme: ColorScheme.fromSwatch(
+          accentColor: const Color.fromARGB(255, 37, 49, 62),
+        ),
         fontFamily: 'Poppins',
       ),
       home: const HomePage(),

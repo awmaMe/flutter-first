@@ -27,7 +27,7 @@ class AboutCard extends StatelessWidget {
             child: DefaultTextStyle.merge(
               style: const TextStyle(
                 color: Colors.white,
-                fontSize: 16,
+                fontWeight: FontWeight.w300,
                 height: 1.5,
               ),
               child: Column(
@@ -38,7 +38,7 @@ class AboutCard extends StatelessWidget {
                     child: const Text(
                       'About',
                       style: TextStyle(
-                        fontSize: 26,
+                        fontSize: 20,
                         fontWeight: FontWeight.w600,
                       ),
                     ),

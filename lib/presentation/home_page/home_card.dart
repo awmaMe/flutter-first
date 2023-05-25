@@ -30,8 +30,7 @@ class HomeCard extends Card {
               ),
               Text(
                 title,
-                style:
-                    const TextStyle(fontWeight: FontWeight.w500, fontSize: 18),
+                style: const TextStyle(fontWeight: FontWeight.w500),
               ),
             ],
           ),
