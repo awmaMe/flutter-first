@@ -26,6 +26,15 @@ class Hello extends StatelessWidget {
         fontFamily: 'Poppins',
       ),
       home: const HomePage(),
+      routes: <String, WidgetBuilder>{
+        '/hello': (BuildContext context) {
+          return const Scaffold(
+            body: Center(
+              child: Text('hello world'),
+            ),
+          );
+        }
+      },
     );
   }
 }
