@@ -1,3 +1,4 @@
+import 'package:first/presentation/home_page/about.dart';
 import 'package:first/utils/my_colors.dart' as my_colors;
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
@@ -11,13 +12,14 @@ class AboutCard extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(10),
       child: Container(
+        margin: const EdgeInsets.symmetric(vertical: 10),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(borderRadius),
           boxShadow: const [
             BoxShadow(
               blurRadius: 10,
               blurStyle: BlurStyle.outer,
-              color: my_colors.PRIMARY,
+              color: my_colors.kPrimaryColor,
             )
           ],
         ),
@@ -25,8 +27,14 @@ class AboutCard extends StatelessWidget {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(borderRadius),
           ),
-          onPressed: () {},
-          color: my_colors.PRIMARY,
+          onPressed: () {
+            Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (BuildContext context) => const HomeAbout(),
+              ),
+            );
+          },
+          color: my_colors.kPrimaryColor,
           child: Padding(
             padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 20),
             child: DefaultTextStyle.merge(

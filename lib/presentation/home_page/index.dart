@@ -14,183 +14,101 @@ class HomePage extends StatelessWidget {
       child: Scaffold(
         body: CustomScrollView(
           slivers: [
-            SliverAppBar(
-              elevation: 10,
-              expandedHeight: 80,
-              collapsedHeight: 70,
-              shadowColor: my_colors.PRIMARY.withOpacity(0.3),
-              pinned: true,
-              leading: null,
-              automaticallyImplyLeading: true,
-              leadingWidth: 0,
-              titleSpacing: 0,
-              backgroundColor: Colors.white,
-              flexibleSpace: FlexibleSpaceBar(
-                // titlePadding:
-                //     const EdgeInsets.symmetric(vertical: 15, horizontal: 10),
-                expandedTitleScale: 1.2,
-                title: Row(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    const Text('Mizoram\nEIACP Hub',
+            SliverSafeArea(
+              top: true,
+              sliver: SliverAppBar(
+                elevation: 10,
+                expandedHeight: 80,
+                collapsedHeight: 70,
+                shadowColor: my_colors.kPrimaryColor.withOpacity(0.3),
+                pinned: true,
+                backgroundColor: Colors.white,
+                flexibleSpace: FlexibleSpaceBar(
+                  titlePadding:
+                      const EdgeInsetsDirectional.symmetric(horizontal: 10),
+                  expandedTitleScale: 1.2,
+                  title: Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      const Text(
+                        'Mizoram\nEIACP Hub',
                         style: TextStyle(
-                          color: my_colors.PRIMARY,
+                          color: my_colors.kPrimaryColor,
                           fontWeight: FontWeight.w700,
                           fontSize: 18,
-                        )),
-                    Image.asset(
-                      'assets/images/EIACP New logo.png',
-                      width: 40,
-                      fit: BoxFit.contain,
-                    ),
-                    // const Expanded(
-                    //   child: Text(
-                    //     'Mizoram\nEIACP Hub',
-                    //     style: TextStyle(
-                    //       color: my_colors.PRIMARY,
-                    //       fontWeight: FontWeight.w700,
-                    //       fontSize: 18,
-                    //     ),
-                    //   ),
-                    // ),
-                    // Image.asset(
-                    //   'assets/images/EIACP New logo.png',
-                    //   width: 40,
-                    //   fit: BoxFit.contain,
-                    // ),
-                  ],
+                        ),
+                      ),
+                      Image.asset(
+                        'assets/images/EIACP New logo.png',
+                        width: 40,
+                        fit: BoxFit.contain,
+                      ),
+                    ],
+                  ),
                 ),
               ),
-              // titleTextStyle: const TextStyle(
-              //     color: my_colors.PRIMARY,
-              //     fontSize: 22,
-              //     fontWeight: FontWeight.w600),
-              // title: const Text('Mizoram\nEIACP Hub'),
-              // actions: [
-              //   Container(
-              //     margin: const EdgeInsets.only(right: 10),
-              //     child: Image.asset(
-              //       'assets/images/EIACP New logo.png',
-              //       width: 40,
-              //       fit: BoxFit.contain,
-              //     ),
-              //   ),
-              // ],
             ),
             SliverList(
-              delegate: SliverChildListDelegate([
-                const SizedBox(
-                  height: 10,
-                ),
-                const AboutCard(),
-                const HomeRow(
-                  cardCol1: HomeCard(
-                    icon: MdiIcons.newspaperVariantMultipleOutline,
-                    title: 'Newsletter',
-                    description: 'Last Update on\n24 May 2023',
+              delegate: SliverChildListDelegate(
+                [
+                  const SizedBox(
+                    height: 10,
                   ),
-                  cardCol2: HomeCard(
-                    icon: MdiIcons.fileDocumentOutline,
-                    title: 'Pamphlet',
-                    description: '24 Pamphlets\nAvailable',
+                  const AboutCard(),
+                  const HomeRow(
+                    cardCol1: HomeCard(
+                      icon: MdiIcons.newspaperVariantMultipleOutline,
+                      title: 'Newsletter',
+                      description: 'Last Update on\n24 May 2023',
+                    ),
+                    cardCol2: HomeCard(
+                      icon: MdiIcons.fileDocumentOutline,
+                      title: 'Pamphlet',
+                      description: '24 Pamphlets\nAvailable',
+                    ),
                   ),
-                ),
-                const HomeRow(
-                  cardCol1: HomeCard(
-                    icon: MdiIcons.artboard,
-                    title: 'Poster',
-                    description: 'Last Update on\n14 May 2023',
+                  const HomeRow(
+                    cardCol1: HomeCard(
+                      icon: MdiIcons.artboard,
+                      title: 'Poster',
+                      description: 'Last Update on\n14 May 2023',
+                    ),
+                    cardCol2: HomeCard(
+                      icon: MdiIcons.bookOpenPageVariant,
+                      title: 'Booklet',
+                      description: '2 Booklets\nAvailable',
+                    ),
                   ),
-                  cardCol2: HomeCard(
-                    icon: MdiIcons.bookOpenPageVariant,
-                    title: 'Booklet',
-                    description: '2 Booklets\nAvailable',
+                  const HomeRow(
+                    cardCol1: HomeCard(
+                      icon: MdiIcons.calendarToday,
+                      title: 'Calendar',
+                      description: 'Important Events',
+                    ),
+                    cardCol2: HomeCard(
+                      icon: MdiIcons.leaf,
+                      title: 'GSDP',
+                      description: 'Green Skill Development Programme',
+                    ),
                   ),
-                ),
-                const HomeRow(
-                  cardCol1: HomeCard(
-                    icon: MdiIcons.calendarToday,
-                    title: 'Calendar',
-                    description: 'Important Events',
+                  const HomeRow(
+                    cardCol1: HomeCard(
+                      icon: MdiIcons.forest,
+                      title: 'LiFE',
+                      description: 'Lifestyle for Environment',
+                    ),
+                    cardCol2: HomeCard(
+                      icon: MdiIcons.fileDownload,
+                      title: 'Downloads',
+                      description: '0 Files Downloaded',
+                    ),
                   ),
-                  cardCol2: HomeCard(
-                    icon: MdiIcons.leaf,
-                    title: 'GSDP',
-                    description: 'Green Skill Development Programme',
-                  ),
-                ),
-                const HomeRow(
-                  cardCol1: HomeCard(
-                    icon: MdiIcons.forest,
-                    title: 'LiFE',
-                    description: 'Lifestyle for Environment',
-                  ),
-                  cardCol2: HomeCard(
-                    icon: MdiIcons.fileDownload,
-                    title: 'Downloads',
-                    description: '0 Files Downloaded',
-                  ),
-                ),
-              ]),
+                ],
+              ),
             )
           ],
         ),
-        // appBar: const HomeAppBar(),
-        // body: ListView(
-        //   padding: const EdgeInsets.all(8.0),
-        //   children: const [
-        //     AboutCard(),
-        //     HomeRow(
-        //       cardCol1: HomeCard(
-        //         icon: MdiIcons.newspaperVariantMultipleOutline,
-        //         title: 'Newsletter',
-        //         description: 'Last Update on\n24 May 2023',
-        //       ),
-        //       cardCol2: HomeCard(
-        //         icon: MdiIcons.fileDocumentOutline,
-        //         title: 'Pamphlet',
-        //         description: '24 Pamphlets\nAvailable',
-        //       ),
-        //     ),
-        //     HomeRow(
-        //       cardCol1: HomeCard(
-        //         icon: MdiIcons.artboard,
-        //         title: 'Poster',
-        //         description: 'Last Update on\n14 May 2023',
-        //       ),
-        //       cardCol2: HomeCard(
-        //         icon: MdiIcons.bookOpenPageVariant,
-        //         title: 'Booklet',
-        //         description: '2 Booklets\nAvailable',
-        //       ),
-        //     ),
-        //     HomeRow(
-        //       cardCol1: HomeCard(
-        //         icon: MdiIcons.calendarToday,
-        //         title: 'Calendar',
-        //         description: 'Important Events',
-        //       ),
-        //       cardCol2: HomeCard(
-        //         icon: MdiIcons.leaf,
-        //         title: 'GSDP',
-        //         description: 'Green Skill Development Programme',
-        //       ),
-        //     ),
-        //     HomeRow(
-        //       cardCol1: HomeCard(
-        //         icon: MdiIcons.forest,
-        //         title: 'LiFE',
-        //         description: 'Lifestyle for Environment',
-        //       ),
-        //       cardCol2: HomeCard(
-        //         icon: MdiIcons.fileDownload,
-        //         title: 'Downloads',
-        //         description: '0 Files Downloaded',
-        //       ),
-        //     ),
-        //   ],
-        // ),
       ),
     );
   }
