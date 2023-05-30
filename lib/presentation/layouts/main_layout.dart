@@ -15,7 +15,13 @@ class MainLayout extends StatelessWidget {
         title: appBarTitle,
         height: MediaQuery.of(context).size.height * 0.07,
       ),
-      body: child,
+      body: ListView.builder(
+        itemCount: 1,
+        padding: const EdgeInsets.symmetric(horizontal: 20),
+        itemBuilder: (context, index) {
+          return child;
+        },
+      ),
     );
   }
 }
