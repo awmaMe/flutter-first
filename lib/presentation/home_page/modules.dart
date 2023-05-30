@@ -1,4 +1,4 @@
-import 'package:first/presentation/home_page/home_card.dart';
+import 'package:first/presentation/home_page/module_button.dart';
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
@@ -58,7 +58,7 @@ class _ModulesState extends State<Modules> {
 
     for (var module in modules) {
       moduleWidgets.add(
-        HomeCard(
+        ModuleButton(
           icon: module['icon'],
           title: module['title'],
           description: module['description'],

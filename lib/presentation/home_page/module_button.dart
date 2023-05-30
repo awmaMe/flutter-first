@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:first/utils/my_colors.dart' as my_colors;
 
-class HomeCard extends Card {
+class ModuleButton extends Card {
   final IconData icon;
   final String title;
   final String description;
   final BorderRadius _roundedBorder = BorderRadius.circular(10);
 
-  HomeCard(
+  ModuleButton(
       {super.key,
       required this.icon,
       required this.title,
@@ -32,7 +32,9 @@ class HomeCard extends Card {
           ],
         ),
         child: MaterialButton(
-          onPressed: () {},
+          onPressed: () {
+            // Navigator.pushNamed(context, title);
+          },
           shape: RoundedRectangleBorder(
             borderRadius: _roundedBorder,
           ),
