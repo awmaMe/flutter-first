@@ -4,6 +4,7 @@ import 'package:first/presentation/layouts/main_layout.dart';
 import 'package:first/utils/my_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:flutter_widget_from_html/flutter_widget_from_html.dart';
 
 class HomeAbout extends StatefulWidget {
   const HomeAbout({super.key});
@@ -22,17 +23,9 @@ class _HomeAboutState extends State<HomeAbout> {
       child: FutureBuilder(
         future: about,
         builder: (context, snapshot) {
-          if (snapshot.hasData) {
-            return ListView(
-              children: const [
-                // Html(
-                //   data: snapshot.data!.description,
-                // ),
-              ],
-            );
-          }
-
-          return const CircularProgressIndicator();
+          return Center(
+            child: getWidget(snapshot),
+          );
         },
       ),
     );
@@ -53,4 +46,15 @@ Future<About> getAbout() async {
   }
 
   throw Exception('Network error');
+}
+
+Widget getWidget(AsyncSnapshot<About> aboutSnapshot) {
+  if (aboutSnapshot.hasData) {
+    return HtmlWidget(
+      enableCaching: true,
+      aboutSnapshot.data!.description,
+    );
+  }
+
+  return const CircularProgressIndicator();
 }
