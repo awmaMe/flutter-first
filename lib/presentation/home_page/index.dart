@@ -52,7 +52,8 @@ class HomePage extends StatelessWidget {
                 [
                   const AboutCard(),
                   Container(
-                    margin: const EdgeInsets.symmetric(vertical: 20),
+                    margin:
+                        const EdgeInsets.symmetric(vertical: 20, horizontal: 5),
                     child: const TextUnderlined(
                       fontSize: 22,
                       text: 'Content of the Application',

@@ -8,11 +8,12 @@ class ModuleButton extends Card {
   final String description;
   final BorderRadius _roundedBorder = BorderRadius.circular(10);
 
-  ModuleButton(
-      {super.key,
-      required this.icon,
-      required this.title,
-      required this.description});
+  ModuleButton({
+    super.key,
+    required this.icon,
+    required this.title,
+    required this.description,
+  });
 
   @override
   Widget build(BuildContext context) {
