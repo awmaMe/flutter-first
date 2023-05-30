@@ -17,10 +17,9 @@ class HomeCard extends Card {
   @override
   Widget build(BuildContext context) {
     return FractionallySizedBox(
-      widthFactor: 0.5,
+      widthFactor: 0.45,
       child: Container(
-        constraints: const BoxConstraints(minHeight: 180),
-        margin: const EdgeInsets.all(10),
+        height: 200,
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: _roundedBorder,

@@ -59,6 +59,9 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
                   const Modules(),
+                  const SizedBox(
+                    height: 20,
+                  ),
                 ],
               ),
             ),

@@ -72,6 +72,9 @@ class _ModulesState extends State<Modules> {
   @override
   Widget build(BuildContext context) {
     return Wrap(
+      alignment: WrapAlignment.center,
+      spacing: 25,
+      runSpacing: 25,
       children: makeModuleWidgets(),
     );
   }
