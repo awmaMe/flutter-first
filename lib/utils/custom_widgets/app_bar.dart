@@ -12,7 +12,6 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return AppBar(
       toolbarHeight: height,
-      leadingWidth: 40,
       leading: IconButton(
         color: kPrimaryColor,
         icon: const Icon(Icons.arrow_back_ios),

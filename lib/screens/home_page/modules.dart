@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'dart:developer';
+import 'dart:io';
 
 import 'package:first/screens/calendar/index.dart';
 import 'package:first/screens/courses/index.dart';
@@ -104,6 +105,9 @@ class _ModulesState extends State<Modules> {
   }
 
   Future getModuleMetas() async {
+    var files = Directory('downloads');
+
+    log(files.path);
     try {
       final response = await http.get(Uri.parse('$kApiUrl/home'));
 

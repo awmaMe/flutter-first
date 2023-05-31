@@ -3,6 +3,7 @@ import 'package:first/screens/courses/index.dart';
 import 'package:first/screens/dlc/index.dart';
 import 'package:first/screens/downloads/index.dart';
 import 'package:first/screens/home_page/index.dart';
+import 'package:first/utils/module_parameter.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
@@ -31,7 +32,11 @@ class Hello extends StatelessWidget {
       ),
       home: const HomePage(),
       routes: {
-        DLC.routeName: (context) => const DLC(),
+        DLC.routeName: (context) {
+          final args =
+              ModalRoute.of(context)!.settings.arguments as ModuleParameter;
+          return DLC(moduleName: args.title);
+        },
         Calendar.routeName: (context) => const Calendar(),
         Courses.routeName: (context) => const Courses(),
         Downloads.routeName: (context) => const Downloads(),
