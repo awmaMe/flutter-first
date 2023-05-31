@@ -109,16 +109,16 @@ class _ModulesState extends State<Modules> {
           for (final moduleMeta in moduleMetas) {
             setState(() {
               final selectedModule = modules
-                  .where((module) => module['title'] == moduleMeta['module']);
+                  .where((module) => module['title'] == moduleMeta['module'])
+                  .firstOrNull;
 
               if (moduleMeta['module'] == 'Newsletter' ||
                   moduleMeta['module'] == 'Poster') {
-                selectedModule.first['description'] +=
-                    moduleMeta['latest_update'];
+                selectedModule!['description'] += moduleMeta['latest_update'];
               } else {
-                selectedModule.first['description'] =
+                selectedModule!['description'] =
                     moduleMeta['content_count'].toString() +
-                        selectedModule.first['description'];
+                        selectedModule['description'];
               }
             });
           }
@@ -136,8 +136,6 @@ class _ModulesState extends State<Modules> {
       );
 
       log(e.toString());
-
-      return null;
     }
   }
 }
