@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'package:first/models/about.dart';
-import 'package:first/presentation/layouts/main_layout.dart';
+import 'package:first/utils/layouts/main_layout.dart';
 import 'package:first/utils/my_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;

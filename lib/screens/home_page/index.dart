@@ -1,6 +1,6 @@
-import 'package:first/presentation/home_page/about_card.dart';
-import 'package:first/presentation/home_page/modules.dart';
-import 'package:first/presentation/shared_widgets/text_underlined.dart';
+import 'package:first/screens/home_page/about_card.dart';
+import 'package:first/screens/home_page/modules.dart';
+import 'package:first/utils/custom_widgets/text_underlined.dart';
 import 'package:first/utils/my_colors.dart' as my_colors;
 import 'package:flutter/material.dart';
 
@@ -11,6 +11,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: CustomScrollView(
+        controller: ScrollController(initialScrollOffset: 200),
         slivers: [
           SliverAppBar(
             elevation: 10,

@@ -2,18 +2,24 @@ import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:first/utils/my_colors.dart' as my_colors;
 
-class ModuleButton extends Card {
+class ModuleButton extends StatefulWidget {
   final IconData icon;
   final String title;
   final String description;
-  final BorderRadius _roundedBorder = BorderRadius.circular(10);
 
-  ModuleButton({
+  const ModuleButton({
     super.key,
     required this.icon,
     required this.title,
     required this.description,
   });
+
+  @override
+  State<ModuleButton> createState() => _ModuleButtonState();
+}
+
+class _ModuleButtonState extends State<ModuleButton> {
+  final BorderRadius _roundedBorder = BorderRadius.circular(5);
 
   @override
   Widget build(BuildContext context) {
@@ -45,7 +51,7 @@ class ModuleButton extends Card {
               Column(
                 children: [
                   Icon(
-                    icon,
+                    widget.icon,
                     size: 28,
                     color: Theme.of(context).primaryColor,
                   ),
@@ -53,13 +59,13 @@ class ModuleButton extends Card {
                     height: 15,
                   ),
                   Text(
-                    title,
+                    widget.title,
                     style: const TextStyle(fontWeight: FontWeight.w500),
                   ),
                 ],
               ),
               Text(
-                description,
+                widget.description,
                 textAlign: TextAlign.center,
                 style: const TextStyle(
                   fontWeight: FontWeight.w300,

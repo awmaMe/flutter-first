@@ -1,4 +1,4 @@
-import 'package:first/presentation/home_page/index.dart';
+import 'package:first/screens/home_page/index.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 

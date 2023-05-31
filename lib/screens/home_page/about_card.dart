@@ -1,4 +1,4 @@
-import 'package:first/presentation/home_page/about.dart';
+import 'package:first/screens/home_page/about.dart';
 import 'package:first/utils/my_colors.dart' as my_colors;
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
