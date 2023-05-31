@@ -1,4 +1,4 @@
-import 'package:first/screens/home_page/app_bar.dart';
+import 'package:first/utils/custom_widgets/app_bar.dart';
 import 'package:flutter/material.dart';
 
 class MainLayout extends StatelessWidget {

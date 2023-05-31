@@ -20,6 +20,7 @@ class HomePage extends StatelessWidget {
             collapsedHeight: kToolbarHeight + 5,
             shadowColor: my_colors.kPrimaryColor.withOpacity(0.3),
             pinned: true,
+            leading: null,
             backgroundColor: Colors.white,
             flexibleSpace: FlexibleSpaceBar(
               titlePadding:

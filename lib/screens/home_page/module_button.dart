@@ -1,3 +1,4 @@
+import 'package:first/utils/module_parameter.dart';
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:first/utils/my_colors.dart' as my_colors;
@@ -6,12 +7,14 @@ class ModuleButton extends StatefulWidget {
   final IconData icon;
   final String title;
   final String description;
+  final String routeName;
 
   const ModuleButton({
     super.key,
     required this.icon,
     required this.title,
     required this.description,
+    required this.routeName,
   });
 
   @override
@@ -40,7 +43,11 @@ class _ModuleButtonState extends State<ModuleButton> {
         ),
         child: MaterialButton(
           onPressed: () {
-            // Navigator.pushNamed(context, title);
+            Navigator.pushNamed(
+              context,
+              widget.routeName,
+              arguments: ModuleParameter(title: widget.title),
+            );
           },
           shape: RoundedRectangleBorder(
             borderRadius: _roundedBorder,

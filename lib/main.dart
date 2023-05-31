@@ -1,3 +1,7 @@
+import 'package:first/screens/calendar/index.dart';
+import 'package:first/screens/courses/index.dart';
+import 'package:first/screens/dlc/index.dart';
+import 'package:first/screens/downloads/index.dart';
 import 'package:first/screens/home_page/index.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
@@ -26,6 +30,12 @@ class Hello extends StatelessWidget {
         fontFamily: 'Poppins',
       ),
       home: const HomePage(),
+      routes: {
+        DLC.routeName: (context) => const DLC(),
+        Calendar.routeName: (context) => const Calendar(),
+        Courses.routeName: (context) => const Courses(),
+        Downloads.routeName: (context) => const Downloads(),
+      },
     );
   }
 }

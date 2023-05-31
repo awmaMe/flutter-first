@@ -1,6 +1,10 @@
 import 'dart:convert';
 import 'dart:developer';
 
+import 'package:first/screens/calendar/index.dart';
+import 'package:first/screens/courses/index.dart';
+import 'package:first/screens/dlc/index.dart';
+import 'package:first/screens/downloads/index.dart';
 import 'package:first/utils/my_strings.dart';
 import 'package:http/http.dart' as http;
 import 'package:first/screens/home_page/module_button.dart';
@@ -20,49 +24,49 @@ class _ModulesState extends State<Modules> {
       'title': 'Newsletter',
       'icon': MdiIcons.newspaperVariantMultipleOutline,
       'description': 'Last Update on\n',
-      'screen': 'dlc',
+      'routeName': DLC.routeName,
     },
     {
       'title': 'Pamphlet',
       'icon': MdiIcons.fileDocumentOutline,
       'description': ' Pamphlets\nAvailable',
-      'screen': 'dlc',
+      'routeName': DLC.routeName,
     },
     {
       'title': 'Poster',
       'icon': MdiIcons.artboard,
       'description': 'Last Update on\n',
-      'screen': 'dlc',
+      'routeName': DLC.routeName,
     },
     {
       'title': 'Booklet',
       'icon': MdiIcons.bookOpenPageVariant,
       'description': ' Booklets\nAvailable',
-      'screen': 'dlc',
+      'routeName': DLC.routeName,
     },
     {
       'title': 'Calendar',
       'icon': MdiIcons.calendarToday,
       'description': 'Important Events',
-      'screen': 'calendar',
+      'routeName': Calendar.routeName,
     },
     {
       'title': 'GSDP',
       'icon': MdiIcons.leaf,
       'description': 'Green Skill Development Programme',
-      'screen': 'courses',
+      'routeName': Courses.routeName,
     },
     {
       'title': 'LiFE',
       'icon': MdiIcons.forest,
       'description': 'Lifestyle for Environment',
-      'screen': 'courses',
+      'routeName': Courses.routeName,
     },
     {
       'title': 'Downloads',
       'icon': MdiIcons.fileDownload,
       'description': ' Files Downloaded',
-      'screen': 'downloads',
+      'routeName': Downloads.routeName,
     },
   ];
 
@@ -75,6 +79,7 @@ class _ModulesState extends State<Modules> {
           icon: module['icon'],
           title: module['title'],
           description: module['description'],
+          routeName: module['routeName'],
         ),
       );
     }

@@ -29,10 +29,15 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
       titleSpacing: 5,
       title: Text(title),
       actions: [
-        Image.asset(
-          'assets/images/EIACP New logo.png',
-          width: 40,
-          fit: BoxFit.contain,
+        IconButton(
+          onPressed: () {
+            Navigator.pushNamed(context, '/');
+          },
+          padding: EdgeInsets.zero,
+          icon: Image.asset(
+            'assets/images/EIACP New logo.png',
+            width: 40,
+          ),
         ),
         const SizedBox(
           width: 10,
